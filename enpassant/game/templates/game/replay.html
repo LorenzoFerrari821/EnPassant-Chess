@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Analyze</title>
+{% endblock %}
+
+{% block body %}
+    <div id="root"></div>
+
+    {{ me|json_script:"me" }}
+    {{ opponent|json_script:"opponent" }}
+    {{ my_color|json_script:"my_color" }}
+    {{ pgn|json_script:"pgn" }}
+
+    <script src="{% static 'js/replay.js' %}"></script>
+{% endblock %}

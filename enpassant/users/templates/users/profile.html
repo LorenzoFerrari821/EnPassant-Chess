@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>{{ user_visited.username }} Profile</title>
+{% endblock %}
+{% block body %}
+
+    <div id="root"></div>
+
+    {{ user_visited.username|json_script:"username" }}
+    {{ user_visited.first_name|json_script:"first_name" }}
+    {{ user_visited.last_name|json_script:"last_name" }}
+    {{ user_visited.country.name|json_script:"country_name" }}
+    {{ user_visited.country.flag|json_script:"country_flag" }}
+    {{ user_visited.picture_url|json_script:"picture" }}
+    {{ user_visited.elo|json_script:"elo" }}
+    {{ user_visited.games_played|json_script:"games_played" }}
+    {{ user_visited.email|json_script:"email" }}
+    {{ mine|json_script:"mine" }}
+
+    <script src="{% static 'js/profile.js' %}"></script>
+
+{% endblock %}

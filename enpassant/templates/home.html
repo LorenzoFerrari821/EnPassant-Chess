@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+    <title>Enpassant Homepage</title>
+{% endblock %}
+{% block body %}
+
+    <div class="card"
+         style="position: fixed; top: 40%; left: 50%; transform: translate(-50%, -50%); border: black; color: white;background-color: rgba(245, 245, 245, 0);">
+        <div class="card-body">
+            <h1 class="card-title">Welcome to EnPassant</h1>
+            <p class="card-text">First you need to log in or create an account if you don't have one yet.</p>
+            <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Sign in</a>
+            <a class="btn btn-warning btn-lg" href="{% url 'signup' %}" role="button">Sign up</a>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+

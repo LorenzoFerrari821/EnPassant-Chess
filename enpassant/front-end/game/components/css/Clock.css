@@ -1,0 +1,10 @@
+.clock {
+    font-family: sans-serif;
+    color: black;
+    font-weight: 100;
+    font-size: 50px;
+    width: fit-content;
+    border: solid thin;
+    background: rgb(240, 217, 181);
+    text-align: center;
+}
